@@ -42,7 +42,7 @@ class LoginCtrl {
         
         $database->select("user", "*", [
 	"AND" => [
-		"login" => $this->form->login,,
+		"login" => $this->form->login,
 		"password" => $this->form->password
                 ]
         ]);
