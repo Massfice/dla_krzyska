@@ -18,39 +18,39 @@ class LoginCtrl {
     }
 
     public function validate() {
-        $this->form->login = ParamUtils::getFromRequest('login');
-        $this->form->password = ParamUtils::getFromRequest('password');
+        $this->form->login = ParamUtils::getFromRequest( 'login' );
+        $this->form->password = ParamUtils::getFromRequest( 'password' );
 
         //nie ma sensu walidować dalej, gdy brak parametrów
-        if (!isset($this->form->login))
-            return false;
+        if ( !isset( $this->form->login ) )
+        return false;
 
         // sprawdzenie, czy potrzebne wartości zostały przekazane
-        if (empty($this->form->login)) {
-            Utils::addErrorMessage('Nie podano loginu');
+        if ( empty( $this->form->login ) ) {
+            Utils::addErrorMessage( 'Nie podano loginu' );
         }
-        if (empty($this->form->pass)) {
-            Utils::addErrorMessage('Nie podano hasła');
+        if ( empty( $this->form->password ) ) {
+            Utils::addErrorMessage( 'Nie podano hasła' );
         }
 
         //nie ma sensu walidować dalej, gdy brak wartości
-        if (App::getMessages()->isError())
-            return false;
+        if ( App::getMessages()->isError() )
+        return false;
 
         // sprawdzenie, czy dane logowania poprawne
-        // (takie informacje najczęściej przechowuje się w bazie danych)
-        
-        $database->select("user", "*", [
-	"AND" => [
-		"login" => $this->form->login,
-		"password" => $this->form->password
-                ]
-        ]);
-        
-        if ($this->form->login == "login" && $this->form->password == "password") {
-            RoleUtils::addRole(rolename);
+        // ( takie informacje najczęściej przechowuje się w bazie danych )
+
+        App::getDB()->select( 'user', '*', [
+            'AND' => [
+                'login' => $this->form->login,
+                'password' => $this->form->password
+            ]
+        ] );
+
+        if ( $this->form->login == 'login' && $this->form->password == 'password' ) {
+            RoleUtils::addRole( 'user' );
         } else {
-            Utils::addErrorMessage('Niepoprawny login lub hasło');
+            Utils::addErrorMessage( 'Niepoprawny login lub hasło' );
         }
 
         return !App::getMessages()->isError();
@@ -61,10 +61,10 @@ class LoginCtrl {
     }
 
     public function action_login() {
-        if ($this->validate()) {
-            //zalogowany => przekieruj na główną akcję (z przekazaniem messages przez sesję)
-            Utils::addErrorMessage('Poprawnie zalogowano do systemu');
-            //App::getRouter()->redirectTo("personList");
+        if ( $this->validate() ) {
+            //zalogowany => przekieruj na główną akcję ( z przekazaniem messages przez sesję )
+            Utils::addErrorMessage( 'Poprawnie zalogowano do systemu' );
+            //App::getRouter()->redirectTo( 'personList' );
         } else {
             //niezalogowany => pozostań na stronie logowania
             $this->generateView();
@@ -75,12 +75,13 @@ class LoginCtrl {
         // 1. zakończenie sesji
         session_destroy();
         // 2. idź na stronę główną - system automatycznie przekieruje do strony logowania
-        App::getRouter()->redirectTo('personList');
+        App::getRouter()->redirectTo( 'personList' );
     }
 
     public function generateView() {
-        App::getSmarty()->assign('form', $this->form); // dane formularza do widoku
-        App::getSmarty()->display('main.tpl');
+        App::getSmarty()->assign( 'form', $this->form );
+        // dane formularza do widoku
+        App::getSmarty()->display( 'main.tpl' );
     }
 
 }
