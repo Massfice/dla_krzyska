@@ -1,0 +1,8 @@
+{
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.defaultFormatter": "chuaple.php-formatter",
+  "[smarty]": {
+    "editor.defaultFormatter": "aswinkumar863.smarty-template-support"
+  },
+}
