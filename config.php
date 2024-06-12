@@ -4,14 +4,14 @@ $conf->debug = true; # set true during development and use in your code (for ins
 # ---- Webapp location
 $conf->server_name = 'localhost';   # server address and port
 $conf->protocol = 'http';           # http or https
-$conf->app_root = '/cantor/public';   # project subfolder in domain (relative to main domain)
+$conf->app_root = '/public';        # project subfolder in domain (relative to main domain)
 
 # ---- Database config - values required by Medoo
 $conf->db_type = 'mysql';
-$conf->db_server = 'localhost';
-$conf->db_name = '_database_name';
-$conf->db_user = '_user';
-$conf->db_pass = '_password';
+$conf->db_server = getenv('DB_HOST');
+$conf->db_name = getenv('DB_NAME');
+$conf->db_user = getenv('DB_USER');
+$conf->db_pass = getenv('DB_PASSWORD');
 $conf->db_charset = 'utf8';
 
 # ---- Database config - optional values
