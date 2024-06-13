@@ -12,7 +12,8 @@ class BaseCtrl {
         $smarty = App::getSmarty();
 
         $smarty->assign( 'page_title', 'Cantor App' );
-        $smarty->assign( 'page_description', 'Cantor app is awsome' );
+        $smarty->assign( 'page_description', 'Cantor app is awesome' );
+        $smarty->assign( 'is_logged_in', $this->isLoggedIn() );
         foreach ( $variables as $key => $value ) {
             $smarty->assign( $key, $value );
         }
