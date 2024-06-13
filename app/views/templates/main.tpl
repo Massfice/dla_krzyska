@@ -15,105 +15,24 @@
 </head>
 
 <body>
-	<div id="page-wrapper">
-
-		<!-- Header -->
-		<section id="header">
-			<div class="container">
-				<div class="row">
-					<div class="col-12">
-
-						<!-- Logo -->
-						<h1><a href="main.tpl" id="logo">Kantor</a></h1>
-
-						<!-- Nav -->
-						<nav id="nav">
-							<a href="main.tpl">Strona główna</a>
-							<a href="login.tpl">Zaloguj się</a>
-							<a href="singup.tpl">Zarejestruj się</a>
-						</nav>
-
-					</div>
-				</div>
-			</div>
-			<div id="banner">
-				<div class="container">
-					<div class="row">
-						<div class="col-6 col-12-medium">
-
-							<!-- Banner Copy -->
-							<p>TU MOZE BYC TWOJA REKLAMA</p>
-						</div>
-						<div class="col-6 col-12-medium imp-medium">
-
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- Features -->
-		<section id="features">
-			<div class="container">
-				<div class="row">
-					<div class="col-3 col-6-medium col-12-small">
-
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- Content -->
-		<section id="content">
-
-			<div class="container">
-
-				<div class="row aln-center">
-					{block name=content}
-						<div class="col-4 col-12-medium">
-
-							<p></p>
-						</div>
-					{/block}
-				</div>
-		</section>
-
-		<!-- Footer -->
-		<section id="footer">
-			<div class="container">
-				<div class="row">
-					<div class="col-8 col-12-medium">
-
-						<!-- Links -->
-						<section>
-
-						</section>
-
-					</div>
-					<div class="col-4 col-12-medium imp-medium">
-
-						<!-- Informacje o stronie -->
-						<section>
-							<h2>Informacje o stronie:</h2>
-							<p>
-								Aplikacja "Cantor" została stworzona na potrzeby zaliczenia modułu.<br />
-
-
-							</p>
-						</section>
-
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- Copyright -->
-		<div id="copyright">
-			&copy; Untitled. All rights reserved. | Design: <a href="http://html5up.net">HTML5 UP</a>
+	<div id="header">
+		<div id="logo">
+			<h1><a href="main.tpl" id="logo">Kantor</a></h1>
 		</div>
 
+		<!-- Header -->
+		<div id="links">
+			<a href="main.tpl">Home</a>
+			<a href="login.tpl">Login</a>
+			<a href="singup.tpl">Register</a>
+		</div>
 	</div>
 
+	<!-- Content -->
+	<div id="content">
+		{block name=content}
+		{/block}
+	</div>
 </body>
 
 </html>
