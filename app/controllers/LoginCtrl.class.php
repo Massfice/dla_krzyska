@@ -8,7 +8,7 @@ use core\RoleUtils;
 use core\ParamUtils;
 use app\forms\LoginForm;
 
-class LoginCtrl {
+class LoginCtrl extends BaseCtrl {
 
     private $form;
 
@@ -57,7 +57,7 @@ class LoginCtrl {
     }
 
     public function action_loginShow() {
-        $this->generateView();
+        $this->generateView( 'main.tpl', [] );
     }
 
     public function action_login() {
@@ -67,7 +67,7 @@ class LoginCtrl {
             //App::getRouter()->redirectTo( 'personList' );
         } else {
             //niezalogowany => pozostań na stronie logowania
-            $this->generateView();
+            $this->generateView( 'main.tpl', [] );
         }
     }
 
@@ -76,12 +76,6 @@ class LoginCtrl {
         session_destroy();
         // 2. idź na stronę główną - system automatycznie przekieruje do strony logowania
         App::getRouter()->redirectTo( 'personList' );
-    }
-
-    public function generateView() {
-        App::getSmarty()->assign( 'form', $this->form );
-        // dane formularza do widoku
-        App::getSmarty()->display( 'main.tpl' );
     }
 
 }
