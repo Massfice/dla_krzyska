@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-	Halcyonic by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 
 <head>
@@ -17,14 +12,14 @@
 <body>
 	<div id="header">
 		<div id="logo">
-			<h1><a href="main.tpl" id="logo">Kantor</a></h1>
+			<h1><a href="home" id="logo">Kantor</a></h1>
 		</div>
 
 		<!-- Header -->
 		<div id="links">
-			<a href="main.tpl">Home</a>
-			<a href="login.tpl">Login</a>
-			<a href="singup.tpl">Register</a>
+			<a href="home">Home</a>
+			<a href="login_view">Login</a>
+			<a href="register_view">Register</a>
 			<a href="logout">Logout</a>
 		</div>
 	</div>
