@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use core\App;
+use core\RoleUtils;
 
 // class for having some common utility
 
@@ -17,5 +18,9 @@ class BaseCtrl {
         }
 
         $smarty->display( $file );
+    }
+
+    protected function isLoggedIn(): bool {
+        return RoleUtils::inRole( 'user' ) || RoleUtils::inRole( 'admin' );
     }
 }
