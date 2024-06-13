@@ -1,3 +1,32 @@
 body {
     margin: 2%;
 }
+
+#header {
+    display: flex;
+    border: 1px solid lightcoral;
+    padding: 1%;
+    border-radius: 20%;
+    margin-bottom: 1%;
+}
+
+#links {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#header a {
+    color: lightcoral;
+    text-decoration: none;
+}
+
+#header a:visited {
+    color: lightcoral;
+    text-decoration: none;
+}
+
+#header a:hover {
+   color: darkred;
+}
