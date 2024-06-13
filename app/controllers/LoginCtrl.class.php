@@ -67,7 +67,7 @@ class LoginCtrl extends BaseCtrl {
             //App::getRouter()->redirectTo( 'personList' );
         } else {
             //niezalogowany => pozostań na stronie logowania
-            $this->generateView( 'main.tpl', [] );
+            $this->generateView( 'home.tpl', [] );
         }
     }
 
