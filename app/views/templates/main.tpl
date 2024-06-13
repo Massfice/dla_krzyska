@@ -30,7 +30,7 @@
 
 	<!-- Content -->
 	<div id="content">
-		{block name=content}
+		{block "content"}
 		{/block}
 	</div>
 </body>
