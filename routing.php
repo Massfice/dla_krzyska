@@ -10,5 +10,6 @@ App::getRouter()->setDefaultRoute( 'home' );
 
 Utils::addRoute( 'home', 'ConversionCtrl' );
 Utils::addRoute( 'register_view', 'UsersCtrl' );
+Utils::addRoute( 'register', 'UsersCtrl' );
 // Utils::addRoute( 'login', 'LoginCtrl' );
 //Utils::addRoute( 'action_name', 'controller_class_name' );
