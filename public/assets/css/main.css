@@ -1,0 +1,67 @@
+body {
+    margin: 2%;
+}
+
+#header {
+    display: flex;
+    border: 1px solid lightcoral;
+    padding: 1%;
+    border-radius: 20%;
+    margin-bottom: 1%;
+    width: 90%;
+}
+
+#links {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#loggedin {
+    width: 90%;
+    padding: 1%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+#header a,
+#header a:visited {
+    color: lightcoral;
+    text-decoration: none;
+}
+
+#header a:hover {
+   color: darkred;
+}
+
+#errors {
+    color: white;
+    width: 90%;
+    background-color: red;
+    border: 1px solid black;
+    padding: 1%;
+    margin-bottom: 1%;
+}
+
+.input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    margin: 1%;
+}
+
+.input input {
+    width: 65%;
+    padding: 2%;
+    border-radius: 10%;
+    border: 1px solid lightcoral;
+}
+
+.input input:hover,
+.input input:focus {
+    border: 1px solid darkred;
+    outline-width: 0;
+}
