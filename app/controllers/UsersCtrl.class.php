@@ -28,6 +28,8 @@ class UsersCtrl extends BaseCtrl {
 
         $user = UsersRepository::addUser( $this->form );
 
+        $this->logIn( $user );
+
         App::getRouter()->redirectTo( 'home' );
     }
 }
