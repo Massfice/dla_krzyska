@@ -2,6 +2,21 @@
 {block name="content"}
     <form action="register" method="post">
         <div class="input">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" value="{$form->name}" />
+        </div>
+
+        <div class="input">
+            <label for="surname">Surname</label>
+            <input type="text" id="surname" name="surname" value="{$form->surname}" />
+        </div>
+
+        <div class="input">
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" value="{$form->city}" />
+        </div>
+
+        <div class="input">
             <label for="username">Username</label>
             <input type="text" id="username" name="username" value="{$form->username}" />
         </div>
