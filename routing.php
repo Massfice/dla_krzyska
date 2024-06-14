@@ -10,6 +10,7 @@ Utils::addRoute( 'home', 'ConversionCtrl' );
 
 Utils::addRoute( 'register_view', 'UsersCtrl' );
 Utils::addRoute( 'register', 'UsersCtrl' );
+Utils::addRoute( 'users_view', 'UsersCtrl', [ 'admin' ] );
 
 Utils::addRoute( 'login_view', 'LoginCtrl' );
 Utils::addRoute( 'login', 'LoginCtrl' );
