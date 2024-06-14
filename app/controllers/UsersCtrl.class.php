@@ -32,4 +32,10 @@ class UsersCtrl extends BaseCtrl {
 
         App::getRouter()->redirectTo( 'home' );
     }
+
+    public function action_users_view() {
+        $users = UsersRepository::getUsers();
+
+        $this->generateView( 'users_list.tpl', [ 'users'=> $users ] );
+    }
 }
