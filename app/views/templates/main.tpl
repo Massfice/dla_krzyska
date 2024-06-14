@@ -19,6 +19,10 @@
 		<div id="links">
 			<a href="home">Home</a>
 
+			{if $is_logged_in && $is_admin}
+				<a href="users_view">View Users</a>
+			{/if}
+
 			{if $is_logged_in}
 				<a href="logout">Logout</a>
 			{else}
