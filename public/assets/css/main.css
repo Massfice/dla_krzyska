@@ -18,6 +18,14 @@ body {
     align-items: center;
 }
 
+#loggedin {
+    width: 90%;
+    padding: 1%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
 #header a,
 #header a:visited {
     color: lightcoral;

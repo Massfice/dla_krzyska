@@ -18,12 +18,21 @@
 		<!-- Header -->
 		<div id="links">
 			<a href="home">Home</a>
-			<a href="login_view">Login</a>
-			<a href="register_view">Register</a>
-			<a href="logout">Logout</a>
+
+			{if $is_logged_in}
+				<a href="logout">Logout</a>
+			{else}
+				<a href="login_view">Login</a>
+				<a href="register_view">Register</a>
+			{/if}
 		</div>
 	</div>
 
+	{if $is_logged_in}
+		<div id="loggedin">
+			Logged as: {$user['name']} {$user['surname']}
+		</div>
+	{/if}
 
 	{if count($msgs->getMessages()) > 0}
 		<div id="errors">
