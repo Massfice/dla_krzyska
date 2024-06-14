@@ -28,6 +28,8 @@ class LoginForm {
 
         if ( $this->user == null ) {
             Utils::addErrorMessage( 'Invalid credentials' );
+
+            return !App::getMessages()->isError();
         }
 
         $isValidPassword = password_verify( $this->password, $this->user[ 'password' ] );

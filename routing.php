@@ -4,7 +4,7 @@ use core\App;
 use core\Utils;
 
 App::getRouter()->setDefaultRoute( 'home' );
-App::getRouter()->setLoginRoute( 'login' );
+App::getRouter()->setLoginRoute( 'login_view' );
 
 Utils::addRoute( 'home', 'ConversionCtrl' );
 
