@@ -3,6 +3,8 @@
 namespace app\controllers;
 
 use app\forms\RegisterForm;
+use app\repositories\UsersRepository;
+use core\App;
 
 class UsersCtrl extends BaseCtrl {
     private RegisterForm $form;
@@ -23,5 +25,9 @@ class UsersCtrl extends BaseCtrl {
 
             return;
         }
+
+        $user = UsersRepository::addUser( $this->form );
+
+        App::getRouter()->redirectTo( 'home' );
     }
 }
