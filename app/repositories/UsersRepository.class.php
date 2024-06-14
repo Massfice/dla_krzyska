@@ -48,4 +48,23 @@ class UsersRepository {
 
         return $data;
     }
+
+    static function getUsers() {
+        $meedo = App::getDB();
+
+        $users = $meedo->select( 'User', [
+            'iduser',
+            'login',
+            'password',
+            'isactive',
+            'lastlogin',
+            'name',
+            'surname',
+            'city',
+            'createdby',
+            'whochanged'
+        ] );
+
+        return $users;
+    }
 }
