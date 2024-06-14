@@ -17,6 +17,7 @@ class BaseCtrl {
         $smarty->assign( 'page_title', 'Cantor App' );
         $smarty->assign( 'page_description', 'Cantor app is awesome' );
         $smarty->assign( 'is_logged_in', $this->isLoggedIn( $user ) );
+        $smarty->assign( 'is_admin', RoleUtils::inRole( 'admin' ) );
         $smarty->assign( 'user', $user );
         foreach ( $variables as $key => $value ) {
             $smarty->assign( $key, $value );
