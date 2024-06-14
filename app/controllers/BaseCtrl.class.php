@@ -12,7 +12,7 @@ use core\SessionUtils;
 class BaseCtrl {
     protected function generateView( string $file, array $variables ) {
         $smarty = App::getSmarty();
-        $user = SessionUtils::loadObject( 'usser', true );
+        $user = SessionUtils::loadObject( 'user', true );
 
         $smarty->assign( 'page_title', 'Cantor App' );
         $smarty->assign( 'page_description', 'Cantor app is awesome' );
