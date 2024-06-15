@@ -8,9 +8,15 @@ use core\ParamUtils;
 use core\Utils;
 
 class LoginForm {
-    public $username;
-    public $password;
+    public string $username;
+    public string $password;
     public $user;
+
+    public function __construct() {
+        $this->username = '';
+        $this->password = '';
+        $this->user = null;
+    }
 
     public function loadAndValidateDataFromRequest() {
         $this->username = ParamUtils::getFromRequest( 'username' );
