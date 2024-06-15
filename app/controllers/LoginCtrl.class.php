@@ -3,7 +3,6 @@
 namespace app\controllers;
 
 use core\App;
-use core\Utils;
 use app\forms\LoginForm;
 
 class LoginCtrl extends BaseCtrl {
