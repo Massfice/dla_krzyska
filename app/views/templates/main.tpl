@@ -21,6 +21,7 @@
 
 			{if $is_logged_in && $is_admin}
 				<a href="users_view">View Users</a>
+				<a href="currencies_view">View Currencies</a>
 			{/if}
 
 			{if $is_logged_in}

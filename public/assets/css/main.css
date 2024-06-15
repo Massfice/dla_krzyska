@@ -60,13 +60,22 @@ a:hover {
     border: 1px solid lightcoral;
 }
 
+.input select {
+    width: 100%;
+    padding: 2%;
+    border-radius: 10%;
+    border: 1px solid lightcoral;
+}
+
 .input input:hover,
-.input input:focus {
+.input input:focus,
+.input select:hover,
+.input select:focus {
     border: 1px solid darkred;
     outline-width: 0;
 }
 
-.user {
+.list {
     display: flex;
     padding: 1%;
     justify-content: space-between;
@@ -74,4 +83,12 @@ a:hover {
     border: 1px solid lightcoral;
     margin: 1%;
     width: 90%
+}
+
+.no_border {
+    border: none !important;
+}
+
+.half {
+    width: 45%;
 }
