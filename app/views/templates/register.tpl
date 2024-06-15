@@ -1,6 +1,6 @@
 {extends file="main.tpl"}
 {block name="content"}
-    <form action="register" method="post">
+    <form action="{$action}" method="post">
         <div class="input">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" value="{$form->name}" />
@@ -32,7 +32,7 @@
         </div>
 
         <div class="input">
-            <input type="submit" value="Register" />
+            <input type="submit" value="{$button_title}" />
         </div>
     </form>
 {/block}

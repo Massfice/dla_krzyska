@@ -1,5 +1,8 @@
 {extends file="main.tpl"}
 {block name="content"}
+    <div>
+        <a href="add_user_view">Add User</a>
+    </div>
     {foreach from=$users item=user}
         <div class="user">
             <div>{$user['name']} {$user['surname']}</div>
