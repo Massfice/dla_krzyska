@@ -15,6 +15,8 @@ Utils::addRoute( 'add_user_view', 'UsersCtrl', [ 'admin' ] );
 Utils::addRoute( 'add_user', 'UsersCtrl', [ 'admin' ] );
 
 Utils::addRoute( 'currencies_view', 'CurrenciesCtrl', [ 'admin' ] );
+Utils::addRoute( 'add_currency_view', 'CurrenciesCtrl', [ 'admin' ] );
+Utils::addRoute( 'add_currency', 'CurrenciesCtrl', [ 'admin' ] );
 
 Utils::addRoute( 'login_view', 'LoginCtrl' );
 Utils::addRoute( 'login', 'LoginCtrl' );
