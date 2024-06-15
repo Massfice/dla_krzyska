@@ -7,9 +7,9 @@ use core\App;
 
 class UsersRepository {
     static function getByUsername( string $username ) {
-        $meedo = App::getDB();
+        $medoo = App::getDB();
 
-        $users = $meedo->select( 'User', [
+        $users = $medoo->select( 'User', [
             'iduser',
             'login',
             'password',
@@ -28,7 +28,7 @@ class UsersRepository {
     }
 
     static function addUser( RegisterForm $form ) {
-        $meedo = App::getDB();
+        $medoo = App::getDB();
 
         $data = [
             'login' => $form->username,
@@ -42,17 +42,17 @@ class UsersRepository {
             'whochanged' => null
         ];
 
-        $meedo->insert( 'User', $data );
+        $medoo->insert( 'User', $data );
 
-        $data[ 'iduser' ] = intval( $meedo->id() );
+        $data[ 'iduser' ] = intval( $medoo->id() );
 
         return $data;
     }
 
     static function getUsers() {
-        $meedo = App::getDB();
+        $medoo = App::getDB();
 
-        $users = $meedo->select( 'User', [
+        $users = $medoo->select( 'User', [
             'iduser',
             'login',
             'password',

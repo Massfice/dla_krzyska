@@ -8,9 +8,9 @@ class RoleRepository {
     static function getRoles( int $userId ) {
         $roles = [ 'user' ];
 
-        $meedo = App::getDB();
+        $medoo = App::getDB();
 
-        $roleDetails = $meedo->select( 'Roledetail', [
+        $roleDetails = $medoo->select( 'Roledetail', [
             'idRoledetail',
             'updatedate',
             'User_iduser',
@@ -20,7 +20,7 @@ class RoleRepository {
         ] );
 
         foreach ( $roleDetails as $roleDetail ) {
-            $role = $meedo->select( 'Role', [
+            $role = $medoo->select( 'Role', [
                 'idRole',
                 'Rolename'
             ], [
