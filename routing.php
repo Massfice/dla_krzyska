@@ -7,6 +7,7 @@ App::getRouter()->setDefaultRoute( 'home' );
 App::getRouter()->setLoginRoute( 'login_view' );
 
 Utils::addRoute( 'home', 'HomeCtrl' );
+Utils::addRoute( 'convert', 'HomeCtrl', [ 'user', 'admin' ] );
 
 Utils::addRoute( 'register_view', 'UsersCtrl' );
 Utils::addRoute( 'register', 'UsersCtrl' );

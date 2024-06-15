@@ -60,8 +60,17 @@ a:hover {
     border: 1px solid lightcoral;
 }
 
+.input select {
+    width: 100%;
+    padding: 2%;
+    border-radius: 10%;
+    border: 1px solid lightcoral;
+}
+
 .input input:hover,
-.input input:focus {
+.input input:focus,
+.input select:hover,
+.input select:focus {
     border: 1px solid darkred;
     outline-width: 0;
 }
